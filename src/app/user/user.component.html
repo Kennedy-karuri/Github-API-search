@@ -1,0 +1,15 @@
+<div>
+    <app-search-form (findUserEmitter)='getFindUser($event)'></app-search-form>
+    <div *ngFor='let user of userDetail'>
+        <p>{{user.login}}</p>
+        <img src="{{user.avatar_url}}" alt="">
+        <p>{{user.public_repos}}</p>
+        <p>{{user.bio}}</p>
+        <p>{{user.followers}}</p>
+        <p>{{user.following}}</p>
+        <p>{{user.created_at}}</p>
+    </div>
+    <div *ngFor='let repo of repo'>
+        <p>{{repo.description}}</p>
+    </div>
+</div>
