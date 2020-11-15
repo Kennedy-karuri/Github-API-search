@@ -1,15 +1,45 @@
 <div>
     <app-search-form (findUserEmitter)='getFindUser($event)'></app-search-form>
-    <div *ngFor='let user of userDetail'>
-        <p>{{user.login}}</p>
-        <img src="{{user.avatar_url}}" alt="">
-        <p>{{user.public_repos}}</p>
-        <p>{{user.bio}}</p>
-        <p>{{user.followers}}</p>
-        <p>{{user.following}}</p>
-        <p>{{user.created_at}}</p>
-    </div>
-    <div *ngFor='let repo of repo'>
-        <p>{{repo.description}}</p>
+    <div class="row">
+        <div class="col-md-5">
+            <div *ngFor='let user of userDetail'>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{user.avatar_url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.login}}</h5>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Bio:{{user.bio}}</li>
+                        <li class="list-group-item">Repos:{{user.public_repos}}</li>
+                        <li class="list-group-item">Followers:{{user.followers}}</li>
+                        <li class="list-group-item">Following:{{user.following}}</li>
+                        <li class="list-group-item">Date-created:{{user.created_at}}</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="jumbotron">
+                        <div *ngFor='let repo of repo'>
+                            <div class="card">
+                                <h5 class="card-header">{{repo.name}}</h5>
+                                <div class="card-body">
+
+                                    <p>{{repo.description}}</p>
+                                    <a href="{{repo.html_url}}" class="btn btn-primary">VIEW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
