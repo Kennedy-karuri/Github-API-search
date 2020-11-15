@@ -1,0 +1,11 @@
+h1{
+    color: blue;
+    font-family: 'Xanh Mono', monospace;
+    text-align: center;
+    text-decoration-line: underline;
+}
+p{
+    font-family: 'Xanh Mono', monospace;
+    text-align: center;
+    padding-top: 30px;
+}
