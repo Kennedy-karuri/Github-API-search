@@ -14,7 +14,7 @@
                         <li class="list-group-item">Repos:{{user.public_repos}}</li>
                         <li class="list-group-item">Followers:{{user.followers}}</li>
                         <li class="list-group-item">Following:{{user.following}}</li>
-                        <li class="list-group-item">Date-created:{{user.created_at}}</li>
+                        <li class="list-group-item">Date-created:{{user.created_at|dateAgo}}</li>
                     </ul>
 
                 </div>
@@ -23,15 +23,15 @@
         </div>
 
         <div class="col-md-7">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="container">
 
+            <div class="row">
+                <div class="col-md-12">
                     <div class="jumbotron">
                         <div *ngFor='let repo of repo'>
                             <div class="card">
                                 <h5 class="card-header">{{repo.name}}</h5>
                                 <div class="card-body">
-
                                     <p>{{repo.description}}</p>
                                     <a href="{{repo.html_url}}" class="btn btn-primary">VIEW</a>
                                 </div>
@@ -41,5 +41,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>

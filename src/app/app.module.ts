@@ -9,6 +9,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserComponent } from './user/user.component';
     NavbarComponent,
     SearchFormComponent,
     AboutComponent,
-    UserComponent
+    UserComponent,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,
